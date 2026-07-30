@@ -1,0 +1,68 @@
+.timeline {
+  width: 100%;
+}
+
+.timeline-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.timeline-item {
+  padding: 8px 16px;
+  background: #0f0f0f;
+  border: 1px solid #1a1a1a;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* 标签和气泡之间的间距 */
+}
+
+.timeline-item:hover {
+  border-color: #333;
+  background: #151515;
+}
+
+.timeline-item.active {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.timeline-label {
+  color: #999;
+  font-size: 12px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+}
+
+.timeline-item.active .timeline-label {
+  color: #00ff88;
+  font-weight: 600;
+}
+
+/* 气泡样式 */
+.timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  background: #ff4444;
+  /* 红色背景表示未解锁 */
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 9px;
+  /* 圆形 */
+  font-family: 'Courier New', monospace;
+}
+
+/* 激活状态下的气泡颜色可以稍微调整 */
+.timeline-item.active .timeline-badge {
+  background: #ff6666;
+}

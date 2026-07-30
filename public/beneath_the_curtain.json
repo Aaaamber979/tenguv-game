@@ -1,0 +1,2001 @@
+{
+    "meta": {
+        "title": "辞楼-Beneath the Curtain",
+        "description": "此为剧团解散前的最后一场演出，请揭露幕布之下的真相。"
+    },
+    "scenes": [
+        {
+            "id": "s1",
+            "name": "休息室",
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+        },
+        {
+            "id": "s2",
+            "name": "道具室",
+            "x": 1,
+            "y": 0,
+            "width": 1,
+            "height": 1
+        },
+        {
+            "id": "s3",
+            "name": "化妆间",
+            "x": 2,
+            "y": 0,
+            "width": 1,
+            "height": 1
+        },
+        {
+            "id": "s4",
+            "name": "卫生间",
+            "x": 3,
+            "y": 0,
+            "width": 1,
+            "height": 1
+        },
+        {
+            "id": "s5",
+            "name": "走廊",
+            "x": 0,
+            "y": 1,
+            "width": 4,
+            "height": 0.5
+        },
+        {
+            "id": "s6",
+            "name": "侧幕",
+            "x": 0,
+            "y": 2,
+            "width": 1,
+            "height": 1.5
+        },
+        {
+            "id": "s7",
+            "name": "舞台",
+            "x": 1,
+            "y": 2,
+            "width": 2,
+            "height": 1.5
+        },
+        {
+            "id": "s8",
+            "name": "中控室",
+            "x": 3,
+            "y": 2,
+            "width": 1,
+            "height": 1.5
+        }
+    ],
+    "characters": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+    ],
+    "timelines": [
+        {
+            "sceneId": "s7",
+            "period": 1,
+            "show": false,
+            "answer": [
+                "D",
+                "E",
+                "G"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "D",
+                    "line": "(哼曲)哎，老赵。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "郑团早啊。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "东西都检查过了么？今天可是最后的表演了，最后的重头戏，收购方的摄像机都架好了，千万别掉链子。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "放心吧，灯光、音响还有承重钩的机关我都测过了，都没问题。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "(叹气)今天只要顺顺利利演完，收购方的尾款一打，大家的遣散费就有着落了。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "(入场的脚步)哟，郑团，赵工，这大早上的，都在这儿盯着呢？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "老李，你来得正好。把那个假人拿出来，老赵这里都测完了，都挂上去再调试一下。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "呃，什么假人。今天演的哪出戏，不是《城门篓子》吗，还要假人？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "什么《城门篓子》，今天演的是《辞楼》，昨天都发群里了你没看吗？"
+                },
+                {
+                    "characterId": "G",
+                    "line": "我去，没注意啊。郑团，你上次不是跟我说咱剧团没钱了，一些破破烂烂的都让我收拾掉么？昨个我看收废品的老刘来了就给他了。这是卖来的二百块钱。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "(声音拔高)卖了？！李大强你手真快啊！我接下来怎么收尾啊？！你得给我解决！不然我给你吊上去！"
+                },
+                {
+                    "characterId": "G",
+                    "line": "多大点事儿啊。不就是个麻袋套棉花，坠下来观众也看不清。《城门篓子》有套道具服我昨个特地保留了，还在呢，你让老赵挂上去看看呗？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "哪套啊？能好使吗？"
+                },
+                {
+                    "characterId": "E",
+                    "line": "没事的郑团，到时候我直接让灯光暗一点，穿不了帮的。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "嗯呢嗯呢，还是老赵有办法。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "你啊你啊！今天最后一天，哪凉快哪呆着去！真不想看见你！"
+                },
+                {
+                    "characterId": "D",
+                    "line": "老赵跟我去休息室和道具室看看，林皓和孙磊他们应该已经要化好妆了。(离开的脚步)"
+                },
+                {
+                    "characterId": "E",
+                    "line": "嗯。(离开的脚步)"
+                },
+                {
+                    "characterId": "G",
+                    "line": "二百您还没拿呢。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "呵，一个要解散的剧团还穷讲究。这破班子，散了也好。不拿点东西回去，对不起我这几年的苦劳。(电话铃声响起)(离开的脚步)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 6,
+            "show": false,
+            "answer": [
+                "B",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "好久不见。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "风挺大。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "是啊，五年前也是这样大的风。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "五年前，你还和我站在一起......"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(叹气)是啊，物是人非。不过，我今天是想来和你来叙旧。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(冷笑)叙旧？"
+                },
+                {
+                    "characterId": "B",
+                    "line": "赫连，你这套把戏，骗骗别人行，在我这儿不好使。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "你一定还怨我吧？"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(冷笑)怨？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "云铮，毕竟咱们曾经同生共死过。我不想看到你这样。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "同生共死？你当年抛下兄弟的时候，怎么没想过同生共死？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "当年我带着弟兄们突围，但那也是为了活命！"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(冷笑)活命活到敌营去了？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "朝廷那帮人早就放弃我们了，换做是你，你也会那么选的。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我不会。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "那是你傻！你在死守什么？为了那些连你名字都叫不全的大人？粮草断了多久了，伤兵连干净的布条都还不上......"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我守的是我身后的城，和城里的百姓。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 7,
+            "show": false,
+            "answer": [
+                "B",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "城没了可以再建，人死了就真没了！只要你点个头，这满城的兵将......"
+                },
+                {
+                    "characterId": "B",
+                    "line": "是你那好主人让你来劝降的，还是你自告奋勇来的？"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我依旧是白袍，你早已换黑甲。我们早已形同陌路。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "云铮，别犟了。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "收起你那套把戏！"
+                },
+                {
+                    "characterId": "H",
+                    "line": "你看看这是什么？(掏东西的声音)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "兵部撤军令？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "三天前，京城加急送出被我们拦截的。援军不是不来，是根本就没派！这座城池，迟早都会是新主的。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "......"
+                },
+                {
+                    "characterId": "H",
+                    "line": "你和这整座城，不过是个朝廷的弃子。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "就算朝廷放弃了我们，我们也不能放弃百姓们。我们必会死战到底。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "我要你活。只要你开城门，你手底下的兵，一个不杀；城里的百姓，秋毫无犯。你，万户侯。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "秋毫无犯？赫连，你当我是三岁孩童，还是当这天下人是瞎子？！"
+                },
+                {
+                    "characterId": "H",
+                    "line": "你什么意思？新主有令，归顺者……"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(拔剑声)归顺者？幽州城破时，你的新主也是这么说的！结果呢？三万降卒被你们活埋筑了京观！云州破时，满城老幼被你们挂在城头风干！赫连，你身后的那群豺狼，什么时候信守过承诺？！"
+                },
+                {
+                    "characterId": "H",
+                    "line": "那是底下人不懂规矩，新主已经严惩了……"
+                },
+                {
+                    "characterId": "B",
+                    "line": "幽州的白骨还没冷，云州的血还没干！就算朝廷不可信，你们更是不可信！"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 8,
+            "show": false,
+            "answer": [
+                "B",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "看在兄弟一场的份上我才......"
+                },
+                {
+                    "characterId": "B",
+                    "line": "谁跟你是兄弟！"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(剑划破空气的声音)我陆云铮就算死，也轮不到你这等屠夫来做主！滚回你的十万大军里去！"
+                },
+                {
+                    "characterId": "H",
+                    "line": "你就这么执意找死，非要拉着百姓们陪葬？那我也没有办法念及旧情了！"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我陆云铮一生未退，为了搏一条活路罢了。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "待我回去复命，你会后悔你的选择。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "赫连，我就在这城头等你！只要我还有一口气，你的兵......啊!(小声地惊讶)......别想踏进城门半步......(略带慌张)"
+                },
+                {
+                    "characterId": "H",
+                    "line": "半个时辰后，破城！鸡犬不留！(离开的脚步)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "......风萧萧兮易水寒......壮士一去兮......不复还......(略带结巴)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(收剑声)(深呼吸声)人在，城在！"
+                },
+                {
+                    "characterId": "B",
+                    "line": "众将士听令……回城，点兵。本将……要亲自巡防最后一道防线。(局促，离开的脚步)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 9,
+            "show": false,
+            "answer": [
+                "D"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "D",
+                    "line": "各位观众朋友，大家晚上好。演出进行到这里，我们的《辞楼》也迎来了中场休息。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "看着台下这么多熟悉的面孔，我这心里啊，真是百感交集。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "咱们剧团成立二十年，风风雨雨，靠的就是在座各位衣食父母的支持和厚爱。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "从当年街头的草台班子，到后来有了自己的剧院，这一路走来，真是不容易啊。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "今天，是我们剧团的最后一场告别演出。演完这出《辞楼》，大幕一落，大家就要各奔东西了。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "说心里话，舍不得。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "舍不得这舞台上的灯光，舍不得台下的掌声，更舍不得和你们一起度过的这些个日日夜夜。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "但天下没有不散的筵席，戏总得落幕，人总得往前看。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "感谢大家今晚能来，陪我们走完这最后一程。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "你们的掌声，是我们最好的散伙饭。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 10,
+            "show": false,
+            "answer": [
+                "D"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "D",
+                    "line": "在这里，我还要特别感谢我们的收购方。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "感谢他们对我们剧团的看重，以及对剧团未来的长远规划。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "正是因为有了收购方的鼎力支持，我们剧团这二十年的老伙计们，能得到最妥善的安置。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "我们绝不会亏待任何一个为剧团流过汗的人，一定会让大家体体面面地开启新生活。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "艺术需要情怀，但也需要生存。这次交接，不是结束，是我们剧团精神的另一种延续。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "虽然咱们剧团的牌子以后可能要换一换了，但我相信，咱们的火种不会灭，大家的情谊也不会断。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "好了，煽情的话我就不多说了，免得耽误大家看戏的兴致。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "接下来的下半场，是《辞楼》最精彩的部分。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "我们的演员们已经准备好了，他们将用生命和热血，为大家呈现一场极致的视觉盛宴。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "请大家稍事休息，五分钟后，我们大幕再启，不见不散！"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 11,
+            "show": false,
+            "answer": [
+                "B",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "(劈砍声)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(铁剑当当声)"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(劈砍声)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(脚步节节败退)"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(劈砍声)你的剑钝了！"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(刺剑声)你休想踏过这道门槛！"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(反手挑剑)(头盔落地声)疯子！你连头盔都不要了？！陆云铮，你现在的样子，就像个丧家之犬！"
+                },
+                {
+                    "characterId": "B",
+                    "line": "丧家之犬……也比你这摇尾乞怜的叛徒强！！"
+                },
+                {
+                    "characterId": "H",
+                    "line": "敬酒不吃吃罚酒！(剑柄砸背声)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(闷哼)(吐血)噗......"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我还能再战......(躺地声)"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(剑断声)结束了，你的剑断了。一切都结束了。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我......还有百姓要保护。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(冷笑)你说得对，还有百姓。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 12,
+            "show": false,
+            "answer": [
+                "B",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "B",
+                    "line": "不准动他们。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "我已经赢了，云铮。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "你......算个什么赢？一支整编队伍和我啃了半个月树皮的士兵们缠斗一个多时辰，很光彩么？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "你的嘴永远都这么硬。就算不光彩我也赢了！留着命才能谈输赢，懂么？你连剑都没了，拿什么跟我斗？！"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(叹气)新主依然很欣赏你，他刚刚说，你死，百姓活；百姓死，你活。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "......(喘息声)"
+                },
+                {
+                    "characterId": "H",
+                    "line": "他又给了你一次机会。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "呵......(喘息声)"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(无奈)但是我也已经知道你的答案了。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "看来我还得谢谢他......动手吧。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "云铮，你知道我做不到的。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我自己来吧......(离场的脚步)"
+                },
+                {
+                    "characterId": "H",
+                    "line": "云铮！"
+                }
+            ]
+        },
+        {
+            "sceneId": "s7",
+            "period": 13,
+            "show": false,
+            "answer": [
+                "A",
+                "B",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "当年在雁门关，你替我挡了那一箭，我背着你杀出重围，那时候我们说好了，要一起封侯拜将，衣锦还乡。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "今天，是我亲手把你逼上了绝路！这赏赐，我虽拿着，心里却像吞了刀子一样疼。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "对不起啊，我不配做你兄弟，我赫连没你那么硬的骨头，我只能跪着求生。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "云铮，其实是你赢了。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "你守住了你的道，我一个人还留在这烂透了的世道里。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "城楼上的风真的很大啊。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我陆云铮的命，是这身银甲给的，是这城头的砖石给的。今日城破，我唯有将这副残躯，化作这孤城最后一道屏障。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "赫连，你且看着！看着这城头的雪，看着这城下的血！我陆云铮，今日辞楼！"
+                },
+                {
+                    "characterId": "A",
+                    "line": "且看我这残躯一坠，能不能砸醒这沉睡的九州！！"
+                },
+                {
+                    "characterId": "A",
+                    "line": "(砰！落地声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s6",
+            "period": 2,
+            "show": false,
+            "answer": [
+                "B",
+                "D",
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "B",
+                    "line": "啊......郑团，早。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "噢？张浩啊，林皓和孙磊化完妆了吗？"
+                },
+                {
+                    "characterId": "B",
+                    "line": "呃......孙磊在化妆室了，林皓还没有来。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "还没来？我给他打电话，这都几点了，再不来就来不及了。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我打过了，没人接。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "这小子是要给我拿乔？这个节骨眼给我玩这些。(电话按键声)"
+                },
+                {
+                    "characterId": "E",
+                    "line": "林皓平时确实挺傲的，但是应该做不出这种事。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "一个两个的都给我搞突发情况！"
+                },
+                {
+                    "characterId": "B",
+                    "line": "郑团……要不，我上吧？我词儿都背熟了，走位也练过几百遍了。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "(电话嘟嘟声)妈的，真不接。那你赶紧的，赶紧去化妆间！(电话按键声)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "哎。(脚步离开声)"
+                },
+                {
+                    "characterId": "D",
+                    "line": "平时待你们也不薄吧！今天这个节骨眼是使劲给我造事故啊！我真的是......虽然咱们是准备解散的，但是收购方是来挑人的，这么好的露脸机会真是一点都不知道珍惜！"
+                },
+                {
+                    "characterId": "E",
+                    "line": "郑团，我先去道具室找一下那套道具服，您也最好先和收购方汇报一下吧。(脚步离开声)"
+                },
+                {
+                    "characterId": "D",
+                    "line": "(电话嘟嘟声)我也没别的办法了。(电话按键声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s6",
+            "period": 5,
+            "show": false,
+            "answer": [
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "(嘀咕)你一定还怨我吧？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(嘀咕)那是你傻......"
+                },
+                {
+                    "characterId": "H",
+                    "line": "(滑动手机的声音)......"
+                }
+            ]
+        },
+        {
+            "sceneId": "s6",
+            "period": 8,
+            "show": false,
+            "answer": [
+                "D",
+                "G"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "G",
+                    "line": "呦，老赵很速度啊已经把道具服挂上了。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "真想抽你丫的。你卖道具，林皓玩失踪，你们合起伙来给我使坏是不是？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "还有这张浩！都他妈给我掉链子。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "你看看他那个站相，松松垮垮的。一个孤城守将，他演得像个刚逃难来的难民。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "我看挺能凑合。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "凑合？跟没上过舞台一样，人抖得跟筛子似的，这么怯场！"
+                },
+                {
+                    "characterId": "G",
+                    "line": "人家毕竟是个替补，临危受命嘛，您就别挑骨头了。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "(生气)连剑都差点收不回去，口碑都要被砸了！"
+                },
+                {
+                    "characterId": "G",
+                    "line": "郑团，您就放宽心吧，等会儿您上台讲完那套“体面告别”的场面话，收购方尾款一打，咱们拿着遣散费，各回各家，谁还口碑不口碑呢？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "你就摆烂吧，再出幺蛾子扣你遣散费！"
+                },
+                {
+                    "characterId": "G",
+                    "line": "我哪敢呢？郑团您慢走，祝您演讲顺利。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s6",
+            "period": 9,
+            "show": false,
+            "answer": [
+                "B",
+                "G",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "这黑甲真闷，脖子都勒疼了。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "(喘息)......"
+                },
+                {
+                    "characterId": "H",
+                    "line": "浩子，林哥不在你要顶住啊。刚刚是不忘词了，下半场你千万稳住别卡词啊。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "是呢，刚郑团都有点不满了，说你站相不咋地，有点怯场。我可帮你说了几句好话，一会再上台可得好好表现。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "嗯......谢谢磊哥，李哥。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "收购方都看着呢，我看林哥不在，也是一个你展示自己的机会。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "全是汗，我得去补妆了。(离开的脚步)"
+                },
+                {
+                    "characterId": "B",
+                    "line": "李哥，那个道具......"
+                },
+                {
+                    "characterId": "G",
+                    "line": "哈，你也知道卖道具的事了？(冷笑)明明是郑团说让我卖点东西来补贴剧团的，临时改了要表演的剧目，又是我的不是了。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "放心吧，不会坏事的，你赵哥有的是办法。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我知道了......那我先回休息室了。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "走吧走吧，郑团的场面话咱都听腻了。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s2",
+            "period": 1,
+            "show": false,
+            "answer": [
+                "B"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "B",
+                    "line": "(喘气)呼......"
+                }
+            ]
+        },
+        {
+            "sceneId": "s2",
+            "period": 3,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "这......"
+                },
+                {
+                    "characterId": "E",
+                    "line": "(推车声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s3",
+            "period": 1,
+            "show": false,
+            "answer": [
+                "F",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "琴姐，林哥来了没？"
+                },
+                {
+                    "characterId": "F",
+                    "line": "还没来过我这呢，先给你化吧。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "还没来呢？以前不是来挺早的嘛."
+                },
+                {
+                    "characterId": "F",
+                    "line": "他签了别家，就这德性了，这都最后一场了，还迟到。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "迟到归迟到，那他也得来吧，合同签着呢，不来就得赔钱，估计是小牌大耍，我做配角这么些年，我见多了。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "张浩倒是还兢兢业业的嘛，昨天我还看他一直在排练呢。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "他练他的吧。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "你就没觉得他有点......太执了？林子都还在呢，他天天琢磨着顶上去。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "他不琢磨这个，还能琢磨什么呢。在剧团这么多年，都没上几次台，这最后一次了，万一还有机会能上场展示展示呢？"
+                },
+                {
+                    "characterId": "F",
+                    "line": "(压低声音)老李这两天倒是安生。前天还跟我笑呵呵地说，郑团仁义，遣散费肯定少不了大家的。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "他高兴就行。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "他那个赌债......你知道多少？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "知道一点。前前后后找我借了五千，说下个月还。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "五千？你一个月才挣多少？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "一个团的，看他被人堵在巷子里拍借条，总不好装看不见。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "嗯......画好了。你出去瞅瞅看林子来了没，再不来来不及了。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "嗯呢，姐我先走了。(离开的脚步声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s3",
+            "period": 2,
+            "show": false,
+            "answer": [
+                "F"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "F",
+                    "line": "哎，真是......(手机按键敲击声)"
+                },
+                {
+                    "characterId": "F",
+                    "line": "(刷抖音的声音)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s3",
+            "period": 3,
+            "show": false,
+            "answer": [
+                "F",
+                "B"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "B",
+                    "line": "(开门声)琴姐，郑团让你先给我上妆。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "呀，今天让你上场了？林子是罢演了？"
+                },
+                {
+                    "characterId": "B",
+                    "line": "...不知道他，我只是看他还没来就跟郑团说了，郑团让我先来上妆。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "也挺好，毕竟你也努力了那么久，能在这最后再上一次场是好事，姐必须给你画好点。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "谢谢姐。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "客气啥，这么久了还跟姐客气，额头汗先擦擦，不好上妆了，咋冒了这么多汗。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "没.....就是有点紧张了。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "是呢，之前没演几场，现在最后一出还得让你来挑梁子。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "不过不用紧张，你的努力大家都看在眼里，你练习的时候演得不错，放心大胆演吧。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "嗯，我排练很多次了。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "收购方也会来看，虽说咱剧团是解散，但是郑团跟我说过，他们也是有挑人的意思。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "我也听说了，我会努力的。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s5",
+            "period": 1,
+            "show": false,
+            "answer": [
+                "C"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "C",
+                    "line": "(嘟囔)小牌......大耍，说谁呢？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "(摸兜声)嚼舌根是吧？我也都给你们录下来。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "(小跑离开)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s5",
+            "period": 2,
+            "show": false,
+            "answer": [
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "(拨打电话声)......"
+                },
+                {
+                    "characterId": "H",
+                    "line": "林哥咋不接电话呢？"
+                }
+            ]
+        },
+        {
+            "sceneId": "s5",
+            "period": 4,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "(推车声)呼......"
+                }
+            ]
+        },
+        {
+            "sceneId": "s5",
+            "period": 3,
+            "show": false,
+            "answer": [
+                "D",
+                "C"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "D",
+                    "line": "(电话按键声)(嘀咕)咋跟收购方说呢......诶，站住，你谁啊？在这走廊转悠什么？后台重地，闲人免进不知道吗？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "我是......"
+                },
+                {
+                    "characterId": "D",
+                    "line": "你这鬼鬼祟祟的，是不是想偷拍后台？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "谁偷拍了！我......我是市戏剧学院校媒的记者！来做剧团告别演出专题采访的！"
+                },
+                {
+                    "characterId": "D",
+                    "line": "校媒的？我怎么没听说，你的记者证呢？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "当然没听说了，资方要收购这里，我来做后台暗访记录的。到时候都是一起宣传的。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "噢！原来是收购方的人。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "那正好！校媒的同志来帮我们记录一下幕后员工的故事。来来来。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "但是演出好像快开始了，我得回台下......"
+                },
+                {
+                    "characterId": "D",
+                    "line": "正是大家只能看到光鲜亮丽的前台，但是看不到坚守奉献的后台啊！"
+                },
+                {
+                    "characterId": "C",
+                    "line": "可是......"
+                },
+                {
+                    "characterId": "D",
+                    "line": "前台演出都是有记录的，后台就需要你们记者同志的记录了！明天就要解散了，你正好也可以做一个深度报道。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "先来休息室吧，演出还要一会开始，我们的演员可能在这里就位等候了。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "啊！可以可以，先给演员们采访！"
+                },
+                {
+                    "characterId": "D",
+                    "line": "小同志，休息室在这里，请。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s2",
+            "period": 10,
+            "show": false,
+            "answer": [
+                "B"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "B",
+                    "line": "(翻东西声)......呼"
+                },
+                {
+                    "characterId": "B",
+                    "line": "怎么回事......怎么办"
+                }
+            ]
+        },
+        {
+            "sceneId": "s3",
+            "period": 4,
+            "show": false,
+            "answer": [
+                "F",
+                "B"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "F",
+                    "line": "行了，睁眼看看。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "跟林哥的很像。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "云铮的脸都这个画法。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "琴姐，你记不记得去年秋天有一回，林子迟到，你给我画了一半，他来了你又给我擦了，当时那卸妆棉在我脸上擦来擦去，凉飕飕的。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "这些年你在幕后也等得辛苦了。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "今天这个，总算不用擦了。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "你去前台找班主的时候，他怎么说？"
+                },
+                {
+                    "characterId": "B",
+                    "line": "班主打了好几个电话，一直没人接。让我先来化妆。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "林子早上一直没出现？"
+                },
+                {
+                    "characterId": "B",
+                    "line": "……我来的时候没见着人。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "行了，差不多了，台上不能没人，你上就是了，别紧张，再冒汗妆花了。"
+                },
+                {
+                    "characterId": "B",
+                    "line": "嗯，那我去了。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s3",
+            "period": 5,
+            "show": false,
+            "answer": [
+                "F"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "F",
+                    "line": "真可乐......(刷抖音的声音)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s3",
+            "period": 6,
+            "show": false,
+            "answer": [
+                "F",
+                "G"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "F",
+                    "line": "演出开始了？你怎么到这来了。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "嘿嘿，前面的都弄完了，我来后面看看呗，又没事。（低声）琴姐，班主跟你提遣散费的事了吗？"
+                },
+                {
+                    "characterId": "F",
+                    "line": "提了，说演完给。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "他说具体什么时候给了吗？"
+                },
+                {
+                    "characterId": "F",
+                    "line": "没说，就说了会发。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "会发……他倒是会说话。你信他？"
+                },
+                {
+                    "characterId": "F",
+                    "line": "那还能怎么办。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "我就是跟你说一声，我看他就不靠谱。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "你那边呢？你那笔账还上了？"
+                },
+                {
+                    "characterId": "G",
+                    "line": "还……还了一部分。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "一部分？你那些东西不是都搬完了吗？"
+                },
+                {
+                    "characterId": "G",
+                    "line": "琴姐，话不能这么说啊。什么东西搬完了？我是看剧团要解散了，就清清库存，该修的修，该扔的扔。"
+                },
+                {
+                    "characterId": "F",
+                    "line": "……"
+                },
+                {
+                    "characterId": "G",
+                    "line": "嘿嘿，琴姐那没啥事我先走了，我去看看前面有没有我需要帮忙的……（打开门）这谁啊……"
+                },
+                {
+                    "characterId": "F",
+                    "line": "是谁啊，我看看（脚步登登登）"
+                }
+            ]
+        },
+        {
+            "sceneId": "s1",
+            "period": 3,
+            "show": false,
+            "answer": [
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "H",
+                    "line": "林哥也真是的。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "......(刷手机的声音)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s1",
+            "period": 4,
+            "show": false,
+            "answer": [
+                "D",
+                "C",
+                "H"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "D",
+                    "line": "呦，磊子在呢。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "郑团。这位是？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "这位是市戏剧学院校媒的记者同志，专门来给咱们剧团做告别专题的。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "哟，记者同志，幸会幸会。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "你好你好。那个，郑团，一会儿是不是也能采访一下主演。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "当然了，那个......演出结束随你采访。现在时间可能来不及了。你和磊子先聊。他可是跟了剧团十五年的老演员了，现在的台柱子，故事多着呢。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "嗯好的。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "磊子，好好跟人家聊，把咱们剧团这些年的不容易都说一说。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "记者同志你想先从哪里开始采访？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "(从背包掏本子的声音)嗯……您在这个剧团多少年了？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "刚郑团说了，十五年。哎这十五年其中十年都是在跑龙套。后来剧团散了很多人，老演员走的走、退的退，我才终于演上了有名有姓的角色。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "噢，那很不容易呢。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "今天要演的这部戏，外面人都说我是配角，但在我心里，这是双男主。没有我的衬托，主角的铁骨起码得少一半的感觉。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "对，双雄对决，缺了谁都不完整。如果还是配角心理，那怎么演的好戏呢？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "(笔记的声音)嗯，是的。但是林皓演得也很好呢。您和林皓平时配合多吗？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "嗯。他也是老演员了。不过配合谈不上，更多的是互相尊重吧。剧团里那些年轻演员敬重我，一半是因为我资历老，另一半……大概是因为我这人比较稳，不惹事。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "磊子确实是咱们剧团的定海神针，有他在，大家心里都踏实。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "郑团过奖了。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "嗯，看得出来。那一会演出您应该不紧张吧？"
+                },
+                {
+                    "characterId": "H",
+                    "line": "演了这么多场，闭着眼睛都能走下来。"
+                },
+                {
+                    "characterId": "H",
+                    "line": "快开始了，要是还有问题，等会儿演出结束再问吧。我先走了，郑团。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s1",
+            "period": 5,
+            "show": false,
+            "answer": [
+                "D",
+                "C"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "C",
+                    "line": "(起身的声音)那郑团我也......"
+                },
+                {
+                    "characterId": "D",
+                    "line": "诶记者同志，先别着急走啊。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "等会儿还有化妆师、道具师要采访呢。他们也是咱们剧团的老功臣了，您一并记录记录。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "呃好吧。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "记者同志，要不我先跟您聊聊咱们剧团的风雨历程吧。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "噢噢，您说。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "(感慨)二十年前，我们剧团就是街边的草台班子。几块破木板搭个台子，大冬天冻得直哆嗦，夏天蚊子能把人抬走。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "那挺辛苦的。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "后来我们省吃俭用，攒了五年钱，才租下这个剧院。你知道那五年我们怎么过的吗？大家住后台，吃盒饭，连生病都不敢去医院，怕耽误排练！大家伙都......"
+                },
+                {
+                    "characterId": "C",
+                    "line": "大家都很不容易啊。那......林皓呢？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "林皓啊，他是后来才加入的，大概七八年前吧。但他一来就挑大梁，确实给剧团带来了很多新气象。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "那他平时排练也很辛苦吧？是不是也经常住后台？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "辛苦是肯定的。他年轻，有冲劲，对戏也认真。不过大家都很辛苦啊，现在后台的这群家伙们都是从学徒干到现在的。现在要解散了，我心里难受啊。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "嗯，能理解。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "剧院的一砖一瓦，都是我们的心血。明天一过，这里就要变成商业广场了。但老伙计们跟着我干了这么多年，我不能让他们白干。这次遣散费，我争取到了最大额度。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s1",
+            "period": 6,
+            "show": false,
+            "answer": [
+                "D",
+                "C"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "C",
+                    "line": "您刚刚说到遣散费，会怎么分配呢？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "咱们剧团的老伙计，一个都不会少。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "林皓作为主演，应该拿最多的吧？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "主演拿得多，但也没多多少。咱们讲究公平，大家都是一起熬过来的。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "您刚刚也说他来了挑大梁，带来很多关注......"
+                },
+                {
+                    "characterId": "D",
+                    "line": "小同志，票房是大家的功劳，不是他一个人的。没有后勤团队的支持，没有磊子给他配戏，他一个人能演什么？不管怎么说，这是集体艺术。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "林皓确实优秀，但咱们剧团能走到今天，靠的是每一个老伙计的付出。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "那剧团的人接下来有什么打算呢？林皓之后会怎么发展呢？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "年轻人嘛，总要去更大的舞台。不过具体的我没问过，不过不用担心，记者同志，我会安排你专访的。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "更大的舞台？"
+                },
+                {
+                    "characterId": "D",
+                    "line": "这是他个人发展了，我这个前领导不好多问的。"
+                },
+                {
+                    "characterId": "D",
+                    "line": "哎呀，看起来演出已经开始了。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "已经开始了吗！要不我们......"
+                },
+                {
+                    "characterId": "D",
+                    "line": "咱先出去吧，一会中场我还有告别演讲。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "好的好的！(离开的脚步)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s4",
+            "period": 2,
+            "show": false,
+            "answer": [
+                "C"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "C",
+                    "line": "哇塞闺蜜，你绝对不知道我录到什么好东西了。(手机键盘敲击声)"
+                },
+                {
+                    "characterId": "C",
+                    "line": "好努力。呜呜好感动。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s4",
+            "period": 4,
+            "show": false,
+            "answer": [
+                "G"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "G",
+                    "line": "哼~(哼小曲的声音)"
+                },
+                {
+                    "characterId": "G",
+                    "line": "老赵这小子带这么好的表，还带定位。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "这咋关呢......"
+                },
+                {
+                    "characterId": "G",
+                    "line": "哼~(哼小曲的声音)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s4",
+            "period": 11,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "(喘气)呼......"
+                },
+                {
+                    "characterId": "E",
+                    "line": "不是在这吗？"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 2,
+            "show": false,
+            "answer": [
+                "G"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "G",
+                    "line": "喂？哎哟，刘哥！哎哎，是我，大强。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "是是是，我知道，我知道。您放心，明天！明天绝对给您打过去！"
+                },
+                {
+                    "characterId": "G",
+                    "line": "真不是拖，等钱到了立刻给您打过去。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "(赔笑)我李大强是什么人，说话绝对算话！明天下午之前，连本带利，一分不少全打到您卡上！"
+                },
+                {
+                    "characterId": "G",
+                    "line": "哎呀，您再宽限我这一天。我儿子下个月结婚，还等着这笔钱凑份子买家电呢。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "好嘞！好嘞！您忙，您忙。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "......呵。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "催催催，有什么好催的。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "(刷短视频的声音)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 3,
+            "show": false,
+            "answer": [
+                "G"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "G",
+                    "line": "真逗嘿！(短视频的声音)"
+                },
+                {
+                    "characterId": "G",
+                    "line": "这网红真好当，卖呆就行了！(短视频的声音)"
+                },
+                {
+                    "characterId": "G",
+                    "line": "完全是个傻瓜蛋。(短视频的声音)"
+                },
+                {
+                    "characterId": "G",
+                    "line": "这是啥？"
+                },
+                {
+                    "characterId": "G",
+                    "line": "呵，还是个苹果的。"
+                },
+                {
+                    "characterId": "G",
+                    "line": "(衣服摩擦声)嘿嘿......"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 5,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "真沉呢......还好有机械臂。(机器降落声)"
+                },
+                {
+                    "characterId": "E",
+                    "line": "嗯......(机器警告声)"
+                },
+                {
+                    "characterId": "E",
+                    "line": "......(机器抬升声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 6,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "呼。(吐烟声)(电话声)"
+                },
+                {
+                    "characterId": "E",
+                    "line": "喂，老陈。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "是的，今天最后一场了，剧场要没了。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "(苦笑)我能怎么办？顺其自然吧。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "呼。(吐烟声)"
+                },
+                {
+                    "characterId": "E",
+                    "line": "嗯，我知道。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "还是那句话，顺其自然吧。"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 7,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "啧啧。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "确实演的没他好。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "(控制台操控声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 8,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "啧啧。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "(点烟声)嘶......"
+                },
+                {
+                    "characterId": "E",
+                    "line": "(控制台操控声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 9,
+            "show": false,
+            "answer": [
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "还是这么能说会道。"
+                },
+                {
+                    "characterId": "E",
+                    "line": "(多次打火声)又没火了......"
+                },
+                {
+                    "characterId": "E",
+                    "line": "嗯？我手表呢？"
+                },
+                {
+                    "characterId": "E",
+                    "line": "靠......(翻找声)(手机键盘声)"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 12,
+            "show": false,
+            "answer": [
+                "C"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "C",
+                    "line": "这里就是中控室？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "这人是谁，这不是林皓！"
+                },
+                {
+                    "characterId": "C",
+                    "line": "黑幕！绝对是黑幕！他们把林皓换掉了！就因为林皓要走了，他们就要在最后一场搞这种下三滥的手段！"
+                },
+                {
+                    "characterId": "C",
+                    "line": "林皓，你别怕。我知道你有多努力！明明今天还在练习的，还好我录下来了！"
+                },
+                {
+                    "characterId": "C",
+                    "line": "你一定在剧团受了很多委屈！"
+                },
+                {
+                    "characterId": "C",
+                    "line": "你演得那么好......我要让所有人都知道，你才是真正的陆云铮！(哭腔)"
+                },
+                {
+                    "characterId": "C",
+                    "line": "你现在在哪呢？是不是失望的在台下看着？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "怎么用......怎么放出来......(着急)"
+                },
+                {
+                    "characterId": "C",
+                    "line": "这是音频入口吧？.......到底怎么播放！"
+                },
+                {
+                    "characterId": "C",
+                    "line": "这是播放键吗？"
+                }
+            ]
+        },
+        {
+            "sceneId": "s8",
+            "period": 13,
+            "show": false,
+            "answer": [
+                "C",
+                "E"
+            ],
+            "dialogues": [
+                {
+                    "characterId": "E",
+                    "line": "记者？"
+                },
+                {
+                    "characterId": "E",
+                    "line": "你在这里做什么？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "......"
+                },
+                {
+                    "characterId": "E",
+                    "line": "谁让你碰中控设备的？出去。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "我不出去！你们这些黑子，搞黑幕换角！"
+                },
+                {
+                    "characterId": "E",
+                    "line": "你在说什么？"
+                },
+                {
+                    "characterId": "C",
+                    "line": "我说你们欺负人！你们就因为他是台柱子、他要走了，就在最后一场把他换掉，让那个废物替补上！"
+                },
+                {
+                    "characterId": "E",
+                    "line": "你其实不是记者吧？我劝你最好不要乱碰中控台的按钮。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "你管我是谁！这是播放键吧？很害怕我把这一切都搞砸把？这样你们就拿不到钱了！你们这群只会压榨林皓的家伙，活该！"
+                },
+                {
+                    "characterId": "E",
+                    "line": "我再提醒你一次，不要乱按。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "呵，舞台也要落幕了。"
+                },
+                {
+                    "characterId": "C",
+                    "line": "我要让所有人都听到！谁才是真正的陆云峥！(中控台音频推子拉到最大)(按下按钮)"
+                }
+            ]
+        }
+    ],
+    "questions": [
+        {
+            "id": "q1",
+            "text": "偷钱的人是谁？",
+            "options": [
+                "c1",
+                "c2",
+                "c3",
+                "c4"
+            ],
+            "correct": "c4"
+        }
+    ]
+}

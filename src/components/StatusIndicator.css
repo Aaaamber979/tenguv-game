@@ -1,0 +1,114 @@
+.status-indicator {
+  position: fixed;
+  bottom: 15px;
+  /* 从 top 改为 bottom */
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 3px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.status-text {
+  color: #999;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+}
+
+/* STANDBY - Green */
+.status-idle .status-dot {
+  background-color: #00ff88;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+.status-idle {
+  border-color: #00ff88;
+}
+
+.status-idle .status-text {
+  color: #00ff88;
+}
+
+/* ANALYZING - Yellow */
+.status-parsing .status-dot {
+  background-color: #ffcc00;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+}
+
+.status-parsing {
+  border-color: #ffcc00;
+}
+
+.status-parsing .status-text {
+  color: #ffcc00;
+}
+
+/* MATCHED - Blue */
+.status-success .status-dot {
+  background-color: #00ccff;
+  box-shadow: 0 0 8px rgba(0, 204, 255, 0.5);
+}
+
+.status-success {
+  border-color: #00ccff;
+}
+
+.status-success .status-text {
+  color: #00ccff;
+}
+
+/* ERROR - Red */
+.status-failure .status-dot {
+  background-color: #ff4444;
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
+}
+
+.status-failure {
+  border-color: #ff4444;
+}
+
+.status-failure .status-text {
+  color: #ff4444;
+}
+
+/* PARTIAL MATCH - Orange/Yellow */
+.status-warning .status-dot {
+  background-color: #ffc107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
+}
+
+.status-warning {
+  border-color: #ffc107;
+}
+
+.status-warning .status-text {
+  color: #ffc107;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+}

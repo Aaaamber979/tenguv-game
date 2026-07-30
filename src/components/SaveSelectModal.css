@@ -1,0 +1,147 @@
+.save-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.save-modal {
+  background: #111;
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding: 40px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-title {
+  color: #00ff88;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 30px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.save-info {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-left: 3px solid #00ccff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+}
+
+.save-label {
+  color: #00ccff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+}
+
+.save-time {
+  color: #e0e0e0;
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.save-progress {
+  color: #999;
+  font-size: 12px;
+  margin: 0;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-new-game,
+.btn-continue {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: 2px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn-new-game {
+  background: transparent;
+  border-color: #666;
+  color: #999;
+}
+
+.btn-new-game:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.05);
+}
+
+.btn-continue {
+  background: transparent;
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.btn-continue:hover {
+  background: #00ff88;
+  color: #0a0a0a;
+}
+
+.btn-continue:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #333;
+  color: #555;
+}
+
+.btn-continue:disabled:hover {
+  background: transparent;
+}
+
+.btn-cancel {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #666;
+  font-size: 12px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 2px;
+}
+
+.btn-cancel:hover {
+  border-color: #666;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  .save-modal {
+    padding: 30px 20px;
+  }
+  
+  .modal-title {
+    font-size: 20px;
+  }
+  
+  .modal-buttons {
+    flex-direction: column;
+  }
+}

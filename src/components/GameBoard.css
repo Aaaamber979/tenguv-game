@@ -1,0 +1,177 @@
+.game-board {
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 工具栏样式 */
+.game-toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 15px;
+  background: #111;
+  border-bottom: 1px solid #222;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  /* 两端对齐 */
+  align-items: center;
+}
+
+.toolbar-right {
+  margin-left: auto;
+  /* 推到右边 */
+}
+
+.game-toolbar button {
+  background: transparent;
+  border: 1px solid #333;
+  color: #999;
+  padding: 8px 16px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.game-toolbar button:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #0a0a0a;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #1a1a1a;
+  border-top-color: #00ff88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-screen p {
+  color: #00ff88;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.game-title {
+  margin: 0 0 5px 0;
+  color: #00ff88;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.game-description {
+  margin: 0;
+  color: #666;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.game-content {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 顶部时间轴 */
+.top-bar {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+/* 主体区域 */
+.main-area {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.6fr;
+  /* 左:中:右 = 1:1.2:0.6 */
+  gap: 15px;
+  min-height: 0;
+  max-height: calc(100vh - 250px);
+  /* 从 200px 改为 250px，留出更多空间 */
+}
+
+.left-section,
+.middle-section,
+.right-section {
+  height: 100%;
+  /* 确保三个区域高度一致 */
+  max-height: 550px;
+  /* 从 500px 增加到 550px */
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.middle-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 15px;
+  overflow: hidden;
+  /* 防止内容溢出 */
+}
+
+.quiz-header {
+  display: none;
+  /* 隐藏，QuizEntry 已移到工具栏 */
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .main-area {
+    grid-template-columns: 1fr;
+  }
+
+  .right-section {
+    flex-direction: row;
+  }
+}

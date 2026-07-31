@@ -16,6 +16,7 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
   const [gameLoaded, setGameLoaded] = React.useState(false);
   const [meta, setMeta] = React.useState({});
   const [showSaveConfirm, setShowSaveConfirm] = React.useState(false);
+  const [showReturnConfirm, setShowReturnConfirm] = React.useState(false);
 
   // 在组件挂载的最开始设置全局变量（确保在GameContext useEffect之前执行）
   React.useLayoutEffect(() => {
@@ -63,12 +64,21 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
     }
   };
 
+  const handleReturnToList = () => {
+    setShowReturnConfirm(true);
+  };
+
+  const handleConfirmReturn = () => {
+    setShowReturnConfirm(false);
+    onReturnToList();
+  };
+
   return (
     <div className="game-board">
       {/* 工具栏 */}
       <div className="game-toolbar">
         <button onClick={handleSaveProgress}>保存进度</button>
-        <button onClick={onReturnToList}>返回列表</button>
+        <button onClick={handleReturnToList}>返回列表</button>
         <div className="toolbar-right">
           <QuizEntry />
         </div>
@@ -82,6 +92,18 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
           onConfirm={handleConfirmSave}
           onCancel={() => setShowSaveConfirm(false)}
           confirmText="确认保存"
+          cancelText="取消"
+        />
+      )}
+
+      {/* 返回列表确认弹窗 */}
+      {showReturnConfirm && (
+        <ConfirmModal
+          title="返回列表"
+          message="确定要返回到游戏列表吗？未保存的进度将会丢失。"
+          onConfirm={handleConfirmReturn}
+          onCancel={() => setShowReturnConfirm(false)}
+          confirmText="确认返回"
           cancelText="取消"
         />
       )}

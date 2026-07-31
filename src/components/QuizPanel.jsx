@@ -14,10 +14,35 @@ const QuizPanel = () => {
 
   const handleAnswerChange = (questionId, answer) => {
     if (submitted) return;
-    setAnswers(prev => ({
-      ...prev,
-      [questionId]: answer
-    }));
+    
+    setAnswers(prev => {
+      const question = questions.find(q => q.id === questionId);
+      const isMultiple = Array.isArray(question?.correct);
+      
+      if (isMultiple) {
+        // 多选题：使用数组存储
+        const currentAnswers = prev[questionId] || [];
+        if (currentAnswers.includes(answer)) {
+          // 取消选择
+          return {
+            ...prev,
+            [questionId]: currentAnswers.filter(a => a !== answer)
+          };
+        } else {
+          // 添加选择
+          return {
+            ...prev,
+            [questionId]: [...currentAnswers, answer]
+          };
+        }
+      } else {
+        // 单选题：直接替换
+        return {
+          ...prev,
+          [questionId]: answer
+        };
+      }
+    });
   };
 
   const handleSubmit = () => {
@@ -31,8 +56,21 @@ const QuizPanel = () => {
     // 计算得分
     let correctCount = 0;
     questions.forEach(q => {
-      if (answers[q.id] === q.correct) {
-        correctCount++;
+      const userAnswer = answers[q.id];
+      const correctAnswer = q.correct;
+      
+      if (Array.isArray(correctAnswer)) {
+        // 多选题：比较数组内容（顺序无关）
+        const isCorrect = Array.isArray(userAnswer) && 
+          userAnswer.length === correctAnswer.length &&
+          userAnswer.every(ans => correctAnswer.includes(ans)) &&
+          correctAnswer.every(ans => userAnswer.includes(ans));
+        if (isCorrect) correctCount++;
+      } else {
+        // 单选题：直接比较
+        if (userAnswer === correctAnswer) {
+          correctCount++;
+        }
       }
     });
 
@@ -68,21 +106,28 @@ const QuizPanel = () => {
                   <div className="question-text">{question.text}</div>
 
                   <div className="options-list">
-                    {question.options.map(option => (
-                      <label
-                        key={option}
-                        className={`option-label ${answers[question.id] === option ? 'selected' : ''}`}
-                      >
-                        <input
-                          type="radio"
-                          name={`question-${question.id}`}
-                          value={option}
-                          checked={answers[question.id] === option}
-                          onChange={() => handleAnswerChange(question.id, option)}
-                        />
-                        <span className="option-text">{getOptionText(option)}</span>
-                      </label>
-                    ))}
+                    {question.options.map(option => {
+                      const isMultiple = Array.isArray(question.correct);
+                      const isSelected = isMultiple 
+                        ? (answers[question.id] || []).includes(option)
+                        : answers[question.id] === option;
+                      
+                      return (
+                        <label
+                          key={option}
+                          className={`option-label ${isSelected ? 'selected' : ''}`}
+                        >
+                          <input
+                            type={isMultiple ? 'checkbox' : 'radio'}
+                            name={isMultiple ? undefined : `question-${question.id}`}
+                            value={option}
+                            checked={isSelected}
+                            onChange={() => handleAnswerChange(question.id, option)}
+                          />
+                          <span className="option-text">{getOptionText(option)}</span>
+                        </label>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -112,15 +157,45 @@ const QuizPanel = () => {
             <div className="answer-review">
               <h3>答案回顾：</h3>
               {questions.map((question, index) => {
-                const isCorrect = answers[question.id] === question.correct;
+                const userAnswer = answers[question.id];
+                const correctAnswer = question.correct;
+                const isMultiple = Array.isArray(correctAnswer);
+                
+                let isCorrect;
+                if (isMultiple) {
+                  isCorrect = Array.isArray(userAnswer) && 
+                    userAnswer.length === correctAnswer.length &&
+                    userAnswer.every(ans => correctAnswer.includes(ans)) &&
+                    correctAnswer.every(ans => userAnswer.includes(ans));
+                } else {
+                  isCorrect = userAnswer === correctAnswer;
+                }
+                
+                // 格式化用户答案显示
+                const formatUserAnswer = () => {
+                  if (isMultiple && Array.isArray(userAnswer)) {
+                    return userAnswer.map(ans => getOptionText(ans)).join('、');
+                  }
+                  return getOptionText(userAnswer);
+                };
+                
+                // 格式化正确答案显示
+                const formatCorrectAnswer = () => {
+                  if (isMultiple && Array.isArray(correctAnswer)) {
+                    return correctAnswer.map(ans => getOptionText(ans)).join('、');
+                  }
+                  return getOptionText(correctAnswer);
+                };
+                
                 return (
                   <div key={question.id} className={`review-item ${isCorrect ? 'correct' : 'incorrect'}`}>
                     <div className="review-question">
                       问题 {index + 1}: {question.text}
+                      {isMultiple && <span className="question-type">（多选）</span>}
                     </div>
                     <div className="review-answer">
-                      你的答案: {getOptionText(answers[question.id])}
-                      {isCorrect ? ' [CORRECT]' : ` [INCORRECT] (正确答案: ${getOptionText(question.correct)})`}
+                      你的答案: {formatUserAnswer()}
+                      {isCorrect ? ' [CORRECT]' : ` [INCORRECT] (正确答案: ${formatCorrectAnswer()})`}
                     </div>
                   </div>
                 );

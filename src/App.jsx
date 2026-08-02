@@ -24,10 +24,8 @@ function App() {
   };
 
   const startNewGame = (gameSource) => {
-    // 先设置全局变量
-    window.__GAME_SOURCE__ = gameSource;
-
-    // 然后递增key强制重新挂载（确保全局变量已设置）
+    // 全局变量已在调用前设置，这里只负责渲染
+    // 递增key强制重新挂载（确保全局变量已设置）
     setGameKey(prev => prev + 1);
     setSelectedGame(gameSource);
   };
@@ -44,21 +42,27 @@ function App() {
     // 清除游戏数据缓存（内存中的gameData）
     clearGameDataCache();
 
+    // 先设置全局变量（必须在渲染 GameBoard 之前）
+    window.__GAME_SOURCE__ = pendingGameSource;
+    window.__SKIP_SAVE_LOAD__ = true;
+
     // 设置标志位表示正在启动新游戏
     setIsStartingNewGame(true);
 
-    // 使用setTimeout确保所有清理完成
-    setTimeout(() => {
-      // 递增key强制重新挂载
-      setGameKey(prev => prev + 1);
-      setSelectedGame(pendingGameSource);
-      setShowSaveModal(false);
-      // 重置标志位
-      setTimeout(() => setIsStartingNewGame(false), 0);
-    }, 100);  // 增加延迟确保清理完成
+    // 直接设置游戏，不通过 setTimeout
+    setGameKey(prev => prev + 1);
+    setSelectedGame(pendingGameSource);
+    setShowSaveModal(false);
   };
 
   const handleContinueGame = () => {
+    // 继续游戏时不设置新游戏标志
+    setIsStartingNewGame(false);
+
+    // 先设置全局变量（必须在渲染 GameBoard 之前）
+    window.__GAME_SOURCE__ = pendingGameSource;
+    window.__SKIP_SAVE_LOAD__ = false;
+
     startNewGame(pendingGameSource);
     setShowSaveModal(false);
   };

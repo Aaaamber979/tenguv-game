@@ -293,6 +293,167 @@
   box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
+/* 结果区域按钮容器 */
+.result-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* 统一的按钮基础样式 */
+.result-button {
+  flex: 1;
+  height: 50px;
+  padding: 0 20px;
+  background: transparent;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* 查看真相按钮 - 蓝色 */
+.result-button.truth {
+  color: #00ccff;
+  border: 1px solid #00ccff;
+}
+
+.result-button.truth:hover {
+  background: #00ccff;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+}
+
+/* 返回游戏按钮 - 绿色 */
+.result-button.restart {
+  color: #00ff88;
+  border: 1px solid #00ff88;
+}
+
+.result-button.restart:hover {
+  background: #00ff88;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+/* 真相弹窗遮罩层 */
+.truth-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+  border-radius: 4px;
+}
+
+/* 真相弹窗面板 */
+.truth-modal {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 25px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+}
+
+/* 真相弹窗头部 */
+.truth-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #222;
+}
+
+.truth-modal-title {
+  margin: 0;
+  color: #00ff88;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.close-truth-modal {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #999;
+  border-radius: 2px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-truth-modal:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+  background: #111;
+}
+
+/* 真相内容区域 */
+.truth-modal-content {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #111;
+  border: 1px solid #222;
+  border-left: 3px solid #00ff88;
+  border-radius: 4px;
+}
+
+.truth-modal-content p {
+  color: #e0e0e0;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* 关闭真相弹窗按钮 */
+.close-truth-modal-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.close-truth-modal-btn:hover {
+  background: #00ff88;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

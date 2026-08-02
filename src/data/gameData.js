@@ -22,15 +22,15 @@ export const loadGameData = async (gameSource = '/game.json') => {
   try {
     // 优先使用传入的gameSource，其次使用window.__GAME_SOURCE__，最后使用默认值
     const source = gameSource || window.__GAME_SOURCE__ || '/game.json';
-    
+
     const response = await fetch(source);
-    
+
     if (!response.ok) {
       throw new Error(`无法加载游戏数据: ${response.status} ${response.statusText}`);
     }
-    
+
     gameData = await response.json();
-    
+
     // 如果characters是字符串数组，转换为对象数组
     if (gameData.characters && Array.isArray(gameData.characters)) {
       if (typeof gameData.characters[0] === 'string') {
@@ -41,17 +41,17 @@ export const loadGameData = async (gameSource = '/game.json') => {
         }));
       }
     }
-    
+
     // 提取show=true的timelines作为默认解锁的对话
     if (gameData.timelines) {
       const defaultUnlocked = gameData.timelines
         .filter(t => t.show === true || t.show === 1)
         .map(t => `${t.sceneId}_${t.period}`);
-      
+
       // 存储到window供GameContext使用
       window.__DEFAULT_UNLOCKED__ = defaultUnlocked;
     }
-    
+
     return gameData;
   } catch (error) {
     console.error('加载游戏数据失败:', error);
@@ -125,4 +125,12 @@ export const getCharacterById = (characterId) => {
 export const getUniquePeriods = (timelines) => {
   const periods = [...new Set(timelines.map(t => t.period))];
   return periods.sort((a, b) => a - b);
+};
+
+/**
+ * 获取结局真相内容
+ * @returns {string|null} 结局文本
+ */
+export const getEndContent = () => {
+  return gameData?.end || null;
 };

@@ -17,6 +17,7 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
   const [meta, setMeta] = React.useState({});
   const [showSaveConfirm, setShowSaveConfirm] = React.useState(false);
   const [showReturnConfirm, setShowReturnConfirm] = React.useState(false);
+  const [showIntro, setShowIntro] = React.useState(skipSaveLoad); // 新游戏时显示介绍
 
   // 在组件挂载的最开始设置全局变量（确保在GameContext useEffect之前执行）
   React.useLayoutEffect(() => {
@@ -34,6 +35,13 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
         await loadGameData(gameSource);
         setMeta(getMeta());
         setGameLoaded(true);
+
+        // 如果是新游戏，显示介绍页面3秒后淡出
+        if (skipSaveLoad) {
+          setTimeout(() => {
+            setShowIntro(false);
+          }, 3000);
+        }
       } catch (error) {
         console.error('游戏加载失败:', error);
         alert(`游戏数据加载失败: ${error.message}`);
@@ -41,7 +49,7 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
     };
 
     initGame();
-  }, []);
+  }, [skipSaveLoad]); // 添加依赖
 
   if (!gameLoaded) {
     return (
@@ -60,7 +68,6 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
     const success = saveGameProgress();
     setShowSaveConfirm(false);
     if (success) {
-      console.log('进度已保存');
     }
   };
 
@@ -75,6 +82,17 @@ const GameBoard = ({ onReturnToList, gameSource, skipSaveLoad }) => {
 
   return (
     <div className="game-board">
+      {/* 新游戏介绍遮罩层 */}
+      {showIntro && meta.description && (
+        <div className="intro-overlay">
+          <div className="intro-content">
+            <h1 className="intro-title">{meta.title || 'TENGUVOX'}</h1>
+            <p className="intro-description">{meta.description}</p>
+            <div className="intro-hint">正在初始化系统...</div>
+          </div>
+        </div>
+      )}
+
       {/* 工具栏 */}
       <div className="game-toolbar">
         <button onClick={handleSaveProgress}>保存进度</button>

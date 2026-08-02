@@ -58,7 +58,7 @@ const GameList = ({ onSelectGame, onViewManual }) => {
         <h1 className="main-title">天狗系统</h1>
         <p className="sub-title">TENGUVOX</p>
         <p className="subtitle">VOICE PRINT DETECTION SYSTEM</p>
-        <button className="manual-button" onClick={onViewManual}>SYSTEM MANUAL</button>
+        <button className="manual-button" onClick={onViewManual}>系统手册</button>
       </header>
 
       <div className="game-grid">

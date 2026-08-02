@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 import { useGame } from '../context/GameContext';
-import { getQuestions } from '../data/gameData';
+import { getQuestions, getEndContent } from '../data/gameData';
 import { getCustomName } from '../utils/helpers';
 import './QuizPanel.css';
 
-const QuizPanel = () => {
+const QuizPanel = ({ onPerfectScore }) => {
   const { customNames, setShowQuiz } = useGame();
   const questions = getQuestions();
+  const endContent = getEndContent();
 
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
+  const [showTruth, setShowTruth] = useState(false); // 显示真相内容
 
   const handleAnswerChange = (questionId, answer) => {
     if (submitted) return;
-    
+
     setAnswers(prev => {
       const question = questions.find(q => q.id === questionId);
       const isMultiple = Array.isArray(question?.correct);
-      
+
       if (isMultiple) {
         // 多选题：使用数组存储
         const currentAnswers = prev[questionId] || [];
@@ -58,10 +60,10 @@ const QuizPanel = () => {
     questions.forEach(q => {
       const userAnswer = answers[q.id];
       const correctAnswer = q.correct;
-      
+
       if (Array.isArray(correctAnswer)) {
         // 多选题：比较数组内容（顺序无关）
-        const isCorrect = Array.isArray(userAnswer) && 
+        const isCorrect = Array.isArray(userAnswer) &&
           userAnswer.length === correctAnswer.length &&
           userAnswer.every(ans => correctAnswer.includes(ans)) &&
           correctAnswer.every(ans => userAnswer.includes(ans));
@@ -76,6 +78,11 @@ const QuizPanel = () => {
 
     setScore(correctCount);
     setSubmitted(true);
+
+    // 如果全对，通知父组件
+    if (correctCount === questions.length && onPerfectScore) {
+      onPerfectScore();
+    }
   };
 
   const handleClose = () => {
@@ -83,6 +90,7 @@ const QuizPanel = () => {
     setAnswers({});
     setSubmitted(false);
     setScore(0);
+    setShowTruth(false);
   };
 
   const getOptionText = (optionId) => {
@@ -108,10 +116,10 @@ const QuizPanel = () => {
                   <div className="options-list">
                     {question.options.map(option => {
                       const isMultiple = Array.isArray(question.correct);
-                      const isSelected = isMultiple 
+                      const isSelected = isMultiple
                         ? (answers[question.id] || []).includes(option)
                         : answers[question.id] === option;
-                      
+
                       return (
                         <label
                           key={option}
@@ -160,17 +168,17 @@ const QuizPanel = () => {
                 const userAnswer = answers[question.id];
                 const correctAnswer = question.correct;
                 const isMultiple = Array.isArray(correctAnswer);
-                
+
                 let isCorrect;
                 if (isMultiple) {
-                  isCorrect = Array.isArray(userAnswer) && 
+                  isCorrect = Array.isArray(userAnswer) &&
                     userAnswer.length === correctAnswer.length &&
                     userAnswer.every(ans => correctAnswer.includes(ans)) &&
                     correctAnswer.every(ans => userAnswer.includes(ans));
                 } else {
                   isCorrect = userAnswer === correctAnswer;
                 }
-                
+
                 // 格式化用户答案显示
                 const formatUserAnswer = () => {
                   if (isMultiple && Array.isArray(userAnswer)) {
@@ -178,7 +186,7 @@ const QuizPanel = () => {
                   }
                   return getOptionText(userAnswer);
                 };
-                
+
                 // 格式化正确答案显示
                 const formatCorrectAnswer = () => {
                   if (isMultiple && Array.isArray(correctAnswer)) {
@@ -186,7 +194,7 @@ const QuizPanel = () => {
                   }
                   return getOptionText(correctAnswer);
                 };
-                
+
                 return (
                   <div key={question.id} className={`review-item ${isCorrect ? 'correct' : 'incorrect'}`}>
                     <div className="review-question">
@@ -202,9 +210,37 @@ const QuizPanel = () => {
               })}
             </div>
 
-            <button className="restart-button" onClick={handleClose}>
-              返回游戏
-            </button>
+            <div className="result-buttons">
+              {score === questions.length && endContent && (
+                <button
+                  className="result-button truth"
+                  onClick={() => setShowTruth(true)}
+                >
+                  查看真相
+                </button>
+              )}
+              <button className="result-button restart" onClick={handleClose}>
+                返回游戏
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* 真相内容弹窗 */}
+        {showTruth && endContent && (
+          <div className="truth-modal-overlay" onClick={() => setShowTruth(false)}>
+            <div className="truth-modal" onClick={e => e.stopPropagation()}>
+              <div className="truth-modal-header">
+                <h3 className="truth-modal-title">真相揭示</h3>
+                <button className="close-truth-modal" onClick={() => setShowTruth(false)}>×</button>
+              </div>
+              <div className="truth-modal-content">
+                <p>{endContent}</p>
+              </div>
+              <button className="close-truth-modal-btn" onClick={() => setShowTruth(false)}>
+                关闭
+              </button>
+            </div>
           </div>
         )}
       </div>

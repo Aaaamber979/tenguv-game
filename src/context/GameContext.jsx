@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { loadGameData, getTimelines } from '../data/gameData';
-import { 
-  loadCustomNames, saveCustomNames, 
+import {
+  loadCustomNames, saveCustomNames,
   loadUnlockedDialogues, saveUnlockedDialogues,
   loadGameSaveFromStorage, saveGameProgressToStorage,
   hasGameSave, clearGameSave
@@ -20,25 +20,25 @@ export const useGame = () => {
 export const GameProvider = ({ children }) => {
   // 自定义名称映射
   const [customNames, setCustomNames] = useState({});
-  
+
   // 角色备注映射
   const [characterRemarks, setCharacterRemarks] = useState({});
-  
+
   // 已解锁的对话列表，格式: ["s1_1", "s2_2", ...]
   const [unlockedDialogues, setUnlockedDialogues] = useState([]);
-  
+
   // 当前选中的场景ID
   const [selectedScene, setSelectedScene] = useState(null);
-  
+
   // 当前选中的时间段
   const [selectedPeriod, setSelectedPeriod] = useState(null);
-  
+
   // 当前选中的角色ID数组（多选）
   const [selectedCharacters, setSelectedCharacters] = useState([]);
-  
+
   // 状态指示器状态: idle | parsing | success | failure
   const [statusIndicator, setStatusIndicator] = useState('idle');
-  
+
   // 是否显示问答环节
   const [showQuiz, setShowQuiz] = useState(false);
 
@@ -50,7 +50,9 @@ export const GameProvider = ({ children }) => {
   // 初始化时从localStorage加载数据
   useEffect(() => {
     const gameSource = window.__GAME_SOURCE__;
-    
+
+    if (!gameSource) return;
+
     // 总是先清空所有状态（确保干净启动）
     setCustomNames({});
     setCharacterRemarks({});
@@ -58,20 +60,14 @@ export const GameProvider = ({ children }) => {
     setSelectedScene(null);
     setSelectedPeriod(null);
     setSelectedCharacters([]);
-    
+
     if (!gameSource) return;
-    
-    // 检查是否需要跳过存档加载（新游戏模式）
-    if (window.__SKIP_SAVE_LOAD__) {
-      window.__SKIP_SAVE_LOAD__ = false;
-      return;
-    }
-    
+
     // 首先确保游戏数据已加载（这会设置 window.__DEFAULT_UNLOCKED__）
     loadGameData(gameSource).then(() => {
       // 尝试加载游戏存档
       const savedGame = loadGameSaveFromStorage(gameSource);
-      
+
       if (savedGame && savedGame.unlockedDialogues && savedGame.unlockedDialogues.length > 0) {
         // 有存档且有解锁的对话，恢复存档数据
         setCustomNames(savedGame.customNames || {});
@@ -142,7 +138,7 @@ export const GameProvider = ({ children }) => {
       console.warn('No game source specified');
       return false;
     }
-    
+
     const gameState = {
       customNames,
       characterRemarks,
@@ -151,10 +147,9 @@ export const GameProvider = ({ children }) => {
       selectedPeriod,
       selectedCharacters
     };
-    
+
     try {
       saveGameProgressToStorage(gameSource, gameState);
-      console.log('Game progress saved successfully');
       return true;
     } catch (error) {
       console.error('Failed to save game progress:', error);
@@ -175,27 +170,27 @@ export const GameProvider = ({ children }) => {
     updateCustomNames,
     characterRemarks,
     updateCharacterRemark,
-    
+
     unlockedDialogues,
     unlockDialogue,
     isDialogueUnlocked,
-    
+
     selectedScene,
     setSelectedScene,
-    
+
     selectedPeriod,
     setSelectedPeriod,
-    
+
     selectedCharacters,
     toggleCharacter,
     clearSelectedCharacters,
-    
+
     statusIndicator,
     setStatusIndicator,
-    
+
     showQuiz,
     setShowQuiz,
-    
+
     saveGameProgress,
     clearCurrentGameSave
   };

@@ -52,8 +52,6 @@
   min-width: 18px;
   height: 18px;
   padding: 0 5px;
-  background: #ff4444;
-  /* 红色背景表示未解锁 */
   color: #fff;
   font-size: 10px;
   font-weight: 600;
@@ -62,7 +60,21 @@
   font-family: 'Courier New', monospace;
 }
 
+/* 已解锁场景 - 蓝色气泡 */
+.timeline-badge-unlocked {
+  background: #4488ff;
+}
+
+/* 未解锁场景 - 红色气泡 */
+.timeline-badge-locked {
+  background: #ff4444;
+}
+
 /* 激活状态下的气泡颜色可以稍微调整 */
-.timeline-item.active .timeline-badge {
+.timeline-item.active .timeline-badge-unlocked {
+  background: #66aaff;
+}
+
+.timeline-item.active .timeline-badge-locked {
   background: #ff6666;
 }

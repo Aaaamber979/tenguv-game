@@ -36,7 +36,7 @@ const SystemManual = ({ onBack }) => {
                         <div className="procedure-step">
                             <span className="step-num">1</span>
                             <div className="step-content">
-                                <p className="step-desc">选定时间点：拖动时间轴选定具体的时间点 - 系统已经告诉你时间轴上每个时间点未解锁的对话数量</p>
+                                <p className="step-desc">选定时间点：时间轴选定具体的时间点 - 系统已经告诉你时间轴上每个时间点已解锁/未解锁的对话数量</p>
                             </div>
                         </div>
 
